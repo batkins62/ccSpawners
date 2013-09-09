@@ -1,0 +1,62 @@
+name: ccSpawner
+main: com.creepercountry.ccspawners.main.CSPlugin
+version: '2.0.5'
+depend: [Vault]
+softdepend: [WorldGuard, PreciousStones]
+website: http://www.creepercountry.com
+author: stealth62
+commands:
+  ccspawner:
+    description: Access to the main Guardian command
+    aliases: [cs, cspawner]
+    permission: cs.admin.commands
+permissions:
+  cs.spawner.*:
+    description: Gives access to all spawner breaking actions
+    children:
+      cc.spawner.spider: true
+      cc.spawner.skeleton: true
+      cc.spawner.blaze: true
+      cc.spawner.pig: true
+      cc.spawner.pigzombie: true
+      cc.spawner.zombie: true
+      cc.spawner.cavespider: true
+  cs.admin.commands:
+    description: Allows you to use the /cs administrate commands
+    default: op
+  cs.spawner.spider:
+    description: Allows you to break a spider spawner
+    default: false
+  cs.spawner.skeleton:
+    description: Allows you to break a skeleton spawner
+    default: false
+  cs.spawner.blaze:
+    description: Allows you to break a blaze spawner
+    default: false
+  cs.spawner.pig:
+    description: Allows you to break a pig spawner
+    default: false
+  cs.spawner.pigzomb:
+    description: Allows you to break a pigzombie spawner
+    default: false
+  cs.spawner.zombie:
+    description: Allows you to break a zombie spawner
+    default: false
+  cs.spawner.cavespider:
+    description: Allows you to break a cavespider spawner
+    default: false
+  cs.lookup:
+    description: use the lookup command
+    default: op
+  cs.notification.broadcast:
+    description: hears broadcast of payouts
+    default: false
+  cs.notification.login:
+    description: notifed on login of recent breaks
+    default: op
+  cs.debug.on:
+    description: Allows you to enable debugmode
+    default: op
+  cs.debug.off:
+    description: Allows you to disable debugmode
+    default: op

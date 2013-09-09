@@ -1,0 +1,132 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                    Notes                             | #
+# +------------------------------------------------------+ #
+############################################################
+
+# If you want to use special characters in this document, 
+# such as accented letters, you MUST save the file as UTF-8,
+# not ANSI.
+# If you receive an error when ccSpawner loads, ensure that:
+#   - No tabs are present: YAML only allows spaces
+#   - Indents are correct: YAML hierarchy is based entirely
+#     on indentation
+#   - You have "escaped" all apostrophes in your text: If you
+#     want to write "don't", for example, write "don''t"
+#     instead (note the doubled apostrophe)
+#   - List items are prefixed with a hyphen and indented:
+#       lists:
+#         - look like this
+#       not:
+#       - like this
+#   - Text with symbols is enclosed in single or double
+#     quotation marks
+
+###########################################################
+#             (do not touch section)                      #
+#                Plugin Variables                         #
+#             (do not touch section)                      #
+###########################################################
+
+# UNLESS YOU KNOW WHAT YOU ARE DOING, DO NOT TOUCH!
+# THIS SECTION WILL AUTOCHANGE BASED ON THE CONDITIONS OF
+# YOUR SERVER, INCLUDING SUCH VARIABLES REGARDING HOOKS
+
+plugin:
+  configversion: 8
+  pluginversion: '1.1.4'
+  isrunning: true
+  language: 'english'
+  vault: true
+  preciousstones: false
+  worldguard: true
+  opIsAdmin: true
+  debug: false
+  locale:
+    lang: 'EN'
+    coun: 'US'
+###########################################################
+#                                                         #
+#                Cash For Spawners                        #
+#                                                         #
+###########################################################
+
+# Players with a node "cs.payout.<something>" will be
+# paid with <something> rather than the default below.
+# enable this feature by setting true to usepermissions
+player:
+  usepermissions: false
+
+# please specify the lowest and largest values you
+# specified to optimise the code from searching wrong.
+  lowest: 0
+  largest: 250
+
+# Below are settings for DEFAULT PAYOUTS, as in:
+# if player doesnt have the permission node, use this.
+# Use 0 for no payout. Negative numbers charge user.
+default:
+  zombie: 250.00
+  spider: 250.00
+  skeleton: 250.00
+  blaze: -1000.00
+  pig: 0.00
+  pigzombie: 0.00
+  cavespider: 100.00
+  ocelot: 0.00
+  magmacube: 0.00
+  cow: 0.00
+  enderman: 0.00
+  villager: 0.00
+  enderdragon: 0.00
+  chicken: 0.00
+  slime: 0.00
+  sheep: 0.00
+  irongolem: 0.00
+  mushroomcow: 0.00
+  squid: 0.00
+  ghast: 0.00
+  wolf: 0.00
+  snowman: 0.00
+  silverfish: 0.00
+  giant: 0.00
+
+# (DO NOT TOUCH)      (DO NOT TOUCH)      (DO NOT TOUCH)
+# (DO NOT TOUCH) Total Breaks of Spawners (DO NOT TOUCH)
+# (DO NOT TOUCH)      (DO NOT TOUCH)      (DO NOT TOUCH)
+record:
+  total-breaks: 0
+  total-money: 0.00
+  
+###########################################################
+#                                                         #
+#                    Notification                         #
+#                                                         #
+###########################################################
+
+# currently not implemented. keep checking back.
+notification:
+
+###########################################################
+#                                                         #
+#                    Messages                             #
+#                                                         #
+###########################################################
+
+######## CURRENTLY NOT IMPLEMENTED, KEEP CHECKING BACK!!!
+
+# Customize the messages the plugin sends to user.
+english:
+  prefix:
+    permission: '[Permission]'
+    compatibility: '[Compatibility]'
+    debug: '[Debug]'
+  break:
+    spider: 'breaking a spider spawner'
+    cavespider: 'breaking a cavespider spawner'
+    zombie: 'breaking a zombie spawner'
+    pigzombie: 'breaking a pigzombie spawner'
+    creeper: 'breaking a creeper spawner'
+    skeleton: 'breaking a skeleton spawner'
+    blaze: 'breaking a blaze spawner'
+    pig: 'breaking a pig spawner'
